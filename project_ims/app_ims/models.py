@@ -29,7 +29,8 @@ class Item(models.Model):
     quantity = models.IntegerField()
     price = models.FloatField()
     total = models.FloatField()
-    entry_date = models.DateTimeField(default=datetime.now())
+    entry_date = models.DateTimeField(null=True, blank=True)
+    update_date = models.DateTimeField(null=True, blank=True)
 
     class Meta:
         db_table = "ims_items"

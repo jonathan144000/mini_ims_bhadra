@@ -11,10 +11,10 @@ IMS | Items Create
             <h1 class="card-title">IMS | Items CREATE</h1>
         </div>
         {% if msg %}
-           <h1>Message: {{ msg }}</h1>
+           <div class="alert alert-success">{{ msg }}</div>
         {% endif %}
         <div class="card-body">
-            <form method="post" action="{% url 'items.create' %}">
+            <form method="POST" action="{% url 'items.create' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
 
